@@ -1,65 +1,222 @@
-import Image from "next/image";
+import Link from "next/link";
+import { AnnouncementBar } from "@/components/announcement-bar";
+import { siteConfig } from "@/config/site";
+
+const features = [
+  "Multi-channel content publishing",
+  "AI-assisted copy generation",
+  "Lead capture workflows",
+  "Customer engagement automation",
+  "Analytics & performance tracking",
+  "CRM and workflow integration",
+];
+
+const steps = [
+  {
+    title: "Connect your channels",
+    description:
+      "Integrate social, email, and CRM tools in one place with guided setup.",
+  },
+  {
+    title: "Build AI-assisted campaigns",
+    description:
+      "Generate, schedule, and personalize content aligned to your audience and goals.",
+  },
+  {
+    title: "Track outcomes and optimize",
+    description:
+      "Monitor performance and automate follow-up workflows to improve pipeline quality.",
+  },
+];
+
+const useCases = [
+  "Automotive dealers",
+  "Local businesses",
+  "Agencies",
+  "Sales teams",
+];
+
+const faqs = [
+  {
+    question: "Who is this platform built for?",
+    answer:
+      "It is designed for teams that need consistent publishing, scalable engagement, and repeatable lead generation across channels.",
+  },
+  {
+    question: "Do I need technical resources to get started?",
+    answer:
+      "No. Most teams launch with standard integrations and prebuilt workflows without custom engineering work.",
+  },
+  {
+    question: "Can we connect our existing CRM?",
+    answer:
+      "Yes. The platform is built to integrate with common CRM and workflow systems used by sales and marketing teams.",
+  },
+  {
+    question: "How does the AI support content creation?",
+    answer:
+      "AI assists with drafting, channel adaptation, and messaging consistency while your team keeps final approval control.",
+  },
+  {
+    question: "Is this suitable for regulated or trust-sensitive markets?",
+    answer:
+      "Yes. The platform prioritizes clear controls, transparent workflows, and structured operational processes.",
+  },
+  {
+    question: "How do we request a demo or pricing details?",
+    answer:
+      "Use the contact page to book a demo or reach our sales team for a scoped discussion.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main>
+      <AnnouncementBar />
+      <section className="mx-auto grid w-full max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[1.3fr_1fr] lg:py-28">
+        <div>
+          <p className="inline-flex rounded-full border border-indigo-300/30 bg-indigo-400/10 px-4 py-1 text-xs font-medium tracking-wide text-indigo-100">
+            Built for modern businesses
+          </p>
+          <h1 className="mt-8 max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Scale reliable growth with AI-powered marketing automation.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+            {siteConfig.productName} helps teams automate content publishing,
+            customer engagement, and lead generation across multiple channels with
+            operational clarity.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-3">
+            <Link
+              href="/contact"
+              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-200"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              {siteConfig.mainCta}
+            </Link>
+            <Link
+              href="/contact"
+              className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/10"
             >
-              Learning
-            </a>{" "}
-            center.
+              {siteConfig.secondaryCta}
+            </Link>
+          </div>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-6 shadow-2xl shadow-black/20">
+          <h2 className="text-lg font-semibold text-white">Platform Focus</h2>
+          <div className="mt-5 space-y-4 text-sm text-slate-300">
+            <p>AI automation for campaigns and day-to-day operations.</p>
+            <p>Multi-channel publishing with consistency controls.</p>
+            <p>Lead generation workflows connected to your pipeline.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-6 py-12">
+        <div className="rounded-2xl border border-white/10 bg-slate-900/50 p-8">
+          <p className="text-sm font-medium uppercase tracking-widest text-slate-400">
+            Trusted foundation
+          </p>
+          <h2 className="mt-3 text-2xl font-semibold text-white">
+            Built for modern businesses
+          </h2>
+          <p className="mt-4 max-w-3xl text-slate-300">
+            Created for teams that need a credible operating layer for marketing
+            automation, stakeholder accountability, and measurable growth.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-6 py-12">
+        <h2 className="text-3xl font-semibold text-white">Features</h2>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature) => (
+            <article
+              key={feature}
+              className="rounded-2xl border border-white/10 bg-slate-900/50 p-6 transition hover:border-indigo-300/40 hover:bg-slate-900"
+            >
+              <h3 className="text-base font-semibold text-white">{feature}</h3>
+              <p className="mt-3 text-sm leading-7 text-slate-300">
+                Structured workflows help your team move faster while maintaining
+                quality and consistency.
+              </p>
+            </article>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-6 py-12">
+        <h2 className="text-3xl font-semibold text-white">How it works</h2>
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
+          {steps.map((step, idx) => (
+            <article
+              key={step.title}
+              className="rounded-2xl border border-white/10 bg-slate-900/50 p-6"
+            >
+              <p className="text-sm font-semibold text-indigo-200">Step {idx + 1}</p>
+              <h3 className="mt-3 text-lg font-semibold text-white">{step.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-slate-300">{step.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-6 py-12">
+        <h2 className="text-3xl font-semibold text-white">Use cases</h2>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {useCases.map((item) => (
+            <article
+              key={item}
+              className="rounded-2xl border border-white/10 bg-slate-900/50 p-6"
+            >
+              <h3 className="text-base font-semibold text-white">{item}</h3>
+              <p className="mt-3 text-sm leading-7 text-slate-300">
+                Operational automation adapted to the workflows and goals of {item.toLowerCase()}.
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-6 py-12">
+        <h2 className="text-3xl font-semibold text-white">Frequently asked questions</h2>
+        <div className="mt-8 space-y-4">
+          {faqs.map((faq) => (
+            <article
+              key={faq.question}
+              className="rounded-2xl border border-white/10 bg-slate-900/50 p-6"
+            >
+              <h3 className="text-base font-semibold text-white">{faq.question}</h3>
+              <p className="mt-3 text-sm leading-7 text-slate-300">{faq.answer}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-6 py-16">
+        <div className="rounded-3xl border border-indigo-300/30 bg-indigo-400/10 p-8 sm:p-12">
+          <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+            Ready to simplify your growth operations?
+          </h2>
+          <p className="mt-4 max-w-2xl text-slate-200">
+            Talk with our team to map your current workflows and see how AI automation
+            can support reliable lead generation at scale.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="/contact"
+              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-200"
+            >
+              {siteConfig.mainCta}
+            </Link>
+            <Link
+              href="/contact"
+              className="rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              {siteConfig.secondaryCta}
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
