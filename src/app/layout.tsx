@@ -18,15 +18,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: {
-    default: `${siteConfig.productName} | AI Marketing Automation`,
+    default: `${siteConfig.productName} | ${siteConfig.tagline}`,
     template: `%s | ${siteConfig.productName}`,
   },
-  description:
-    "AI-powered marketing automation platform for multi-channel publishing, engagement automation, and lead generation.",
+  description: siteConfig.shortDescription,
   openGraph: {
-    title: `${siteConfig.productName} | AI Marketing Automation`,
-    description:
-      "Automate publishing, customer engagement, and lead generation across channels.",
+    title: `${siteConfig.productName} | ${siteConfig.tagline}`,
+    description: siteConfig.shortDescription,
     url: siteConfig.siteUrl,
     siteName: siteConfig.brandName,
     locale: "en_US",

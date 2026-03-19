@@ -7,9 +7,7 @@ export function SiteFooter() {
       <div className="mx-auto grid w-full max-w-6xl gap-5 px-6 py-10 sm:grid-cols-2 sm:items-end">
         <div>
           <p className="text-base font-semibold text-white">{siteConfig.brandName}</p>
-          <p className="mt-2 text-sm text-slate-400">
-            AI-powered marketing automation platform for modern businesses.
-          </p>
+          <p className="mt-2 text-sm text-slate-400">{siteConfig.tagline}</p>
         </div>
         <div className="sm:justify-self-end">
           <div className="flex flex-wrap gap-4 text-sm text-slate-300">

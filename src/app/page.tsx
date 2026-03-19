@@ -4,10 +4,10 @@ import { siteConfig } from "@/config/site";
 
 const features = [
   "Multi-channel content publishing",
-  "AI-assisted copy generation",
+  "AI-assisted content creation",
   "Lead capture workflows",
   "Customer engagement automation",
-  "Analytics & performance tracking",
+  "Analytics and performance tracking",
   "CRM and workflow integration",
 ];
 
@@ -15,17 +15,17 @@ const steps = [
   {
     title: "Connect your channels",
     description:
-      "Integrate social, email, and CRM tools in one place with guided setup.",
+      "Connect your publishing, communication, and CRM tools in one workspace.",
   },
   {
-    title: "Build AI-assisted campaigns",
+    title: "Create and launch faster",
     description:
-      "Generate, schedule, and personalize content aligned to your audience and goals.",
+      "Use AI-assisted drafting to prepare content, then publish to multiple channels.",
   },
   {
-    title: "Track outcomes and optimize",
+    title: "Track outcomes and improve",
     description:
-      "Monitor performance and automate follow-up workflows to improve pipeline quality.",
+      "Review performance metrics and automate lead follow-up based on engagement.",
   },
 ];
 
@@ -40,32 +40,32 @@ const faqs = [
   {
     question: "Who is this platform built for?",
     answer:
-      "It is designed for teams that need consistent publishing, scalable engagement, and repeatable lead generation across channels.",
+      `${siteConfig.productName} is designed for ${siteConfig.targetAudience.toLowerCase()}.`,
   },
   {
     question: "Do I need technical resources to get started?",
     answer:
-      "No. Most teams launch with standard integrations and prebuilt workflows without custom engineering work.",
+      "Most teams can begin with standard integrations and simple workflows without building custom systems.",
   },
   {
     question: "Can we connect our existing CRM?",
     answer:
-      "Yes. The platform is built to integrate with common CRM and workflow systems used by sales and marketing teams.",
+      "Yes. The platform is built to work with CRM and workflow tools used by marketing and sales teams.",
   },
   {
     question: "How does the AI support content creation?",
     answer:
-      "AI assists with drafting, channel adaptation, and messaging consistency while your team keeps final approval control.",
+      "AI assists with drafting and adapting content for different channels, while your team keeps final review control.",
   },
   {
     question: "Is this suitable for regulated or trust-sensitive markets?",
     answer:
-      "Yes. The platform prioritizes clear controls, transparent workflows, and structured operational processes.",
+      "The platform focuses on clear processes, controlled publishing, and transparent performance reporting.",
   },
   {
     question: "How do we request a demo or pricing details?",
     answer:
-      "Use the contact page to book a demo or reach our sales team for a scoped discussion.",
+      "Visit the contact page to book a demo or speak with our sales team.",
   },
 ];
 
@@ -76,15 +76,13 @@ export default function Home() {
       <section className="mx-auto grid w-full max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[1.3fr_1fr] lg:py-28">
         <div>
           <p className="inline-flex rounded-full border border-indigo-300/30 bg-indigo-400/10 px-4 py-1 text-xs font-medium tracking-wide text-indigo-100">
-            Built for modern businesses
+            {siteConfig.tagline}
           </p>
           <h1 className="mt-8 max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Scale reliable growth with AI-powered marketing automation.
+            Marketing automation built for practical execution.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            {siteConfig.productName} helps teams automate content publishing,
-            customer engagement, and lead generation across multiple channels with
-            operational clarity.
+            {siteConfig.shortDescription}
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
@@ -104,9 +102,9 @@ export default function Home() {
         <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-6 shadow-2xl shadow-black/20">
           <h2 className="text-lg font-semibold text-white">Platform Focus</h2>
           <div className="mt-5 space-y-4 text-sm text-slate-300">
-            <p>AI automation for campaigns and day-to-day operations.</p>
-            <p>Multi-channel publishing with consistency controls.</p>
-            <p>Lead generation workflows connected to your pipeline.</p>
+            <p>AI-assisted creation to reduce manual campaign effort.</p>
+            <p>Multi-channel publishing with consistent messaging.</p>
+            <p>Lead capture and engagement workflows connected to CRM.</p>
           </div>
         </div>
       </section>
@@ -120,8 +118,8 @@ export default function Home() {
             Built for modern businesses
           </h2>
           <p className="mt-4 max-w-3xl text-slate-300">
-            Created for teams that need a credible operating layer for marketing
-            automation, stakeholder accountability, and measurable growth.
+            {siteConfig.productName} is designed for {siteConfig.targetAudience.toLowerCase()} who need dependable
+            operations for publishing, engagement, and lead generation.
           </p>
         </div>
       </section>
@@ -136,8 +134,7 @@ export default function Home() {
             >
               <h3 className="text-base font-semibold text-white">{feature}</h3>
               <p className="mt-3 text-sm leading-7 text-slate-300">
-                Structured workflows help your team move faster while maintaining
-                quality and consistency.
+                Built for daily marketing execution with clear workflow control and reliable output quality.
               </p>
             </article>
           ))}
@@ -170,7 +167,7 @@ export default function Home() {
             >
               <h3 className="text-base font-semibold text-white">{item}</h3>
               <p className="mt-3 text-sm leading-7 text-slate-300">
-                Operational automation adapted to the workflows and goals of {item.toLowerCase()}.
+                Practical automation tailored to how {item.toLowerCase()} publish content and manage pipeline activity.
               </p>
             </article>
           ))}
@@ -195,11 +192,10 @@ export default function Home() {
       <section className="mx-auto w-full max-w-6xl px-6 py-16">
         <div className="rounded-3xl border border-indigo-300/30 bg-indigo-400/10 p-8 sm:p-12">
           <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-            Ready to simplify your growth operations?
+            Bring consistency to your marketing operations.
           </h2>
           <p className="mt-4 max-w-2xl text-slate-200">
-            Talk with our team to map your current workflows and see how AI automation
-            can support reliable lead generation at scale.
+            Talk with Zenova to review your current workflow and identify a practical rollout plan for automation.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link

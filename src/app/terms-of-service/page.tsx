@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: `Terms of Service for ${siteConfig.productName}.`,
+  description: `Terms of Service for the ${siteConfig.productName} website.`,
 };
 
 export default function TermsOfServicePage() {
@@ -12,91 +12,85 @@ export default function TermsOfServicePage() {
       <article className="rounded-2xl border border-white/10 bg-slate-900/60 p-8 sm:p-10">
         <h1 className="text-3xl font-semibold text-white">Terms of Service</h1>
         <p className="mt-4 text-sm leading-7 text-slate-300">
-          Effective Date: [Month DD, YYYY]
+          Effective Date: March 19, 2026
         </p>
         <p className="mt-6 text-sm leading-7 text-slate-300">
-          These Terms of Service govern your access to and use of services provided
-          by [Company Name] through [Domain] and {siteConfig.productName}. By
-          accessing or using our services, you agree to these terms.
+          These Terms of Service govern your use of the {siteConfig.productName}
+          website at {siteConfig.domain}. By accessing or using this website, you
+          agree to these terms.
         </p>
 
         <section className="mt-8 space-y-6">
           <h2 className="text-xl font-semibold text-white">Acceptance of Terms</h2>
           <p className="text-sm leading-7 text-slate-300">
-            You represent that you have authority to enter into these terms on behalf
-            of yourself or your organization and will comply with applicable laws and
-            contractual obligations.
+            By using this website, you confirm that you have read and accepted these
+            Terms. If you use the website for an organization, you confirm that you
+            are authorized to act on its behalf.
           </p>
         </section>
 
         <section className="mt-8 space-y-6">
-          <h2 className="text-xl font-semibold text-white">Use of Service</h2>
+          <h2 className="text-xl font-semibold text-white">
+            Use of the Website and Services
+          </h2>
           <p className="text-sm leading-7 text-slate-300">
-            You may use the service only for legitimate business purposes and in
-            accordance with documented platform capabilities, subscription scope, and
-            applicable regulations.
-          </p>
-        </section>
-
-        <section className="mt-8 space-y-6">
-          <h2 className="text-xl font-semibold text-white">Account Responsibilities</h2>
-          <p className="text-sm leading-7 text-slate-300">
-            You are responsible for maintaining account security, protecting credentials,
-            ensuring user-level permissions are appropriate, and promptly reporting
-            unauthorized access or suspected misuse.
+            You may use this website for lawful business purposes, including reviewing
+            product information and contacting our team. Any future service features
+            are subject to separate commercial or technical agreements.
           </p>
         </section>
 
         <section className="mt-8 space-y-6">
           <h2 className="text-xl font-semibold text-white">Prohibited Use</h2>
           <p className="text-sm leading-7 text-slate-300">
-            You may not use the service for unlawful, deceptive, abusive, infringing,
-            or security-threatening activities, including attempts to disrupt platform
-            integrity or violate third-party rights.
+            You must not misuse this website, including by attempting unauthorized
+            access, introducing malicious code, violating laws, infringing rights, or
+            interfering with normal site operations.
           </p>
         </section>
 
         <section className="mt-8 space-y-6">
           <h2 className="text-xl font-semibold text-white">Intellectual Property</h2>
           <p className="text-sm leading-7 text-slate-300">
-            The service, software, and related materials are owned by [Company Name]
-            or licensors. Except for limited use rights expressly granted, no ownership
-            rights are transferred to you.
+            Website content, branding, and related materials are owned by{" "}
+            {siteConfig.companyName} or used with permission. You may not copy,
+            distribute, or reuse materials without prior written approval.
           </p>
         </section>
 
         <section className="mt-8 space-y-6">
           <h2 className="text-xl font-semibold text-white">Disclaimer</h2>
           <p className="text-sm leading-7 text-slate-300">
-            The service is provided on an as-available basis. While we seek reliable
-            performance, we do not guarantee uninterrupted operation, specific business
-            outcomes, or compatibility beyond documented requirements.
+            This website and its content are provided on an as-is and as-available
+            basis. We do not guarantee uninterrupted availability or specific business
+            outcomes from website content.
           </p>
         </section>
 
         <section className="mt-8 space-y-6">
           <h2 className="text-xl font-semibold text-white">Limitation of Liability</h2>
           <p className="text-sm leading-7 text-slate-300">
-            To the maximum extent permitted by law, [Company Name] is not liable for
-            indirect, incidental, consequential, or special damages arising from use
-            of the service, including loss of revenue, data, or business opportunities.
+            To the extent permitted by law, {siteConfig.companyName} is not liable for
+            indirect or consequential damages arising from use of this website.
           </p>
         </section>
 
         <section className="mt-8 space-y-6">
           <h2 className="text-xl font-semibold text-white">Termination</h2>
           <p className="text-sm leading-7 text-slate-300">
-            We may suspend or terminate access if these terms are violated, payment
-            obligations are unmet, or legal or security requirements demand immediate
-            action. You may stop using the service at any time.
+            We may restrict or suspend access to the website if these Terms are violated
+            or if needed to protect legal, security, or operational interests.
           </p>
         </section>
 
         <section className="mt-8 space-y-6">
           <h2 className="text-xl font-semibold text-white">Contact Information</h2>
           <p className="text-sm leading-7 text-slate-300">
-            For terms-related inquiries, contact [Company Name] at [Email] or{" "}
-            {siteConfig.supportEmail}. Additional contact details may be listed on [Domain].
+            For questions about these Terms, contact {siteConfig.companyName} at{" "}
+            <a href={`mailto:${siteConfig.supportEmail}`} className="underline">
+              {siteConfig.supportEmail}
+            </a>
+            .
           </p>
         </section>
       </article>

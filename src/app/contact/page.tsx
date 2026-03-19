@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Contact ${siteConfig.brandName} for demos and sales.`,
+  description: `Contact ${siteConfig.brandName} for product questions, demos, and sales inquiries.`,
 };
 
 export default function ContactPage() {
@@ -13,8 +13,7 @@ export default function ContactPage() {
         <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-8">
           <h1 className="text-3xl font-semibold text-white">Contact</h1>
           <p className="mt-4 text-sm leading-7 text-slate-300">
-            Reach our team for product questions, partnership discussions, and onboarding
-            support.
+            Reach the Zenova team for product questions, implementation planning, and commercial discussions.
           </p>
 
           <div className="mt-8 space-y-6">
@@ -41,6 +40,9 @@ export default function ContactPage() {
 
         <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-8">
           <h2 className="text-xl font-semibold text-white">Book a Demo</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-300">
+            This form is for initial inquiries only. Submission handling is not connected to a backend yet.
+          </p>
           <form className="mt-6 space-y-4">
             <div>
               <label htmlFor="name" className="text-sm text-slate-300">
@@ -50,7 +52,7 @@ export default function ContactPage() {
                 id="name"
                 name="name"
                 type="text"
-                placeholder="Jane Smith"
+                placeholder="Your full name"
                 className="mt-2 w-full rounded-xl border border-white/15 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition focus:border-indigo-300/70"
               />
             </div>
@@ -62,7 +64,7 @@ export default function ContactPage() {
                 id="email"
                 name="email"
                 type="email"
-                placeholder="jane@company.com"
+                placeholder="you@company.com"
                 className="mt-2 w-full rounded-xl border border-white/15 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition focus:border-indigo-300/70"
               />
             </div>
@@ -74,7 +76,7 @@ export default function ContactPage() {
                 id="company"
                 name="company"
                 type="text"
-                placeholder="Company Name"
+                placeholder="Your company"
                 className="mt-2 w-full rounded-xl border border-white/15 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition focus:border-indigo-300/70"
               />
             </div>
@@ -86,7 +88,7 @@ export default function ContactPage() {
                 id="message"
                 name="message"
                 rows={5}
-                placeholder="Tell us about your channels, goals, and current workflow."
+                placeholder="Tell us about your publishing channels, lead goals, and current process."
                 className="mt-2 w-full rounded-xl border border-white/15 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition focus:border-indigo-300/70"
               />
             </div>

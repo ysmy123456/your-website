@@ -1,13 +1,20 @@
 export const siteConfig = {
-  brandName: "[Your Brand Name]",
-  productName: "[Your Product Name]",
-  domain: "[yourdomain.com]",
-  siteUrl: "https://example.com",
-  supportEmail: "[support@yourdomain.com]",
-  salesEmail: "[sales@yourdomain.com]",
+  brandName: "Zenova",
+  companyName: "Zenova",
+  productName: "Zenova AI",
+  domain: "cczenova.online",
+  siteUrl: "https://cczenova.online",
+  supportEmail: "xiaomingzeng28@gmail.com",
+  salesEmail: "xiaomingzeng28@gmail.com",
   mainCta: "Book a Demo",
   secondaryCta: "Contact Sales",
-  announcement: "Now onboarding new partners for Q2 automation pilots.",
+  tagline: "AI-powered marketing automation for modern businesses.",
+  shortDescription:
+    "Zenova helps businesses automate content publishing, lead generation, and customer engagement across multiple channels.",
+  targetAudience:
+    "Automotive dealers, agencies, local businesses, and growth teams.",
+  announcement:
+    "Zenova AI is available for pilot onboarding across automotive, agency, and local business teams.",
 };
 
 export const navLinks = [
